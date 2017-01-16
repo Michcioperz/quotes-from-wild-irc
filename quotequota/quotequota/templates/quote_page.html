@@ -1,0 +1,8 @@
+{% extends "core.html" %}
+{% load cache %}
+{% block title %}Quote #{{ quote.pk }}{% endblock title %}
+{% block content %}
+{% cache 600 quote quote.pk %}
+{% include "quote.html" with quote=quote only %}
+{% endcache %}
+{% endblock content %}

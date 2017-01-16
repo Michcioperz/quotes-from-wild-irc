@@ -120,3 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(os.getenv('VIRTUALENV', BASE_DIR), 'static_export')
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'quotequota_magical_cache',
+    }
+}

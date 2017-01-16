@@ -1,0 +1,11 @@
+{% load cache %}
+{% cache quote quote.pk %}
+<section class="quote" data-quote-id="{{ quote.pk }}">
+  <blockquote>
+    <pre>
+      {{ quote.content | escape }}
+    </pre>
+    <footer>
+      <cite><a href="{% url "render_quote" quote.pk %}">{{ quote.added_timestamp }} | #{{ quote.pk }}</a></cite>
+    </footer>
+</section>
