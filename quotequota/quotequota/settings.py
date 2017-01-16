@@ -123,7 +123,7 @@ STATIC_ROOT = os.path.join(os.getenv('VIRTUALENV', BASE_DIR), 'static_export')
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'quotequota_magical_cache',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(os.getenv('VIRTUALENV', BASE_DIR), 'tmp', 'djcache'),
     }
 }
