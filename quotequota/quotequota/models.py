@@ -7,4 +7,4 @@ class Quote(models.Model):
     added_timestamp = models.DateTimeField(default=timezone.now)
 
     def get_absolute_url(self):
-        return reverse("render-quote", args=(self.pk,))
+        return reverse("render_quote", args=(self.pk,))
