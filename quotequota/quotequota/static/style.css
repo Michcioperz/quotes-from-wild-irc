@@ -1,8 +1,7 @@
 blockquote {
-  white-space: pre-wrap;
   font-family: 'Ubuntu Mono', 'Courier New', 'Helvetica Neue', 'Lato', 'Roboto', monospace, sans-serif;
 }
 blockquote p {
-  text-indent: -1em;
-  padding-left: 1em;
+  text-indent: -10ch;
+  padding-left: 10ch;
 }
