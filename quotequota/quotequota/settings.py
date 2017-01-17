@@ -132,3 +132,8 @@ CACHES = {
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'quotequota', 'locale'),
 ]
+
+LANGUAGES = [
+    ('pl', 'Polish'),
+    ('en', 'English'),
+]

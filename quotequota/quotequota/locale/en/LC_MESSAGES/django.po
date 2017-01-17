@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-17 18:13+0100\n"
+"PO-Revision-Date: 2017-01-17 18:14+0100\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: quotequota/templates/core.html:9 quotequota/templates/core.html:15
+msgid "Quotes from IRC"
+msgstr "Quotes from IRC"
+
+#: quotequota/templates/core.html:21
+#, python-format
+msgid "There is 1 quote at the time."
+msgid_plural "There are %(counter)s quotes at the time."
+msgstr[0] "There is 1 quote at the time."
+msgstr[1] "There are %(counter)s quotes at the time."
+
+#: quotequota/templates/core.html:22
+msgid "Random quote"
+msgstr "Random quote"
+
+#: quotequota/templates/core.html:23
+msgid "Add a quote"
+msgstr "Add a quote"
+
+#: quotequota/templates/core.html:31
+msgid "All quotes may or may not be copyright of their respective authors."
+msgstr ""
+"All quotes may or may not be copyright of their respective authors."
+
+#: quotequota/templates/core.html:32
+msgid ""
+"Website powered by <a href=\"https://meekchopp.es\">Michcioperz</a>'s <a "
+"href=\"https://github.com/michcioperz/quotes-from-wild-irc\">random free "
+"time project</a>."
+msgstr ""
+"Website powered by <a href=\"https://meekchopp.es\">Michcioperz</a>'s <a "
+"href=\"https://github.com/michcioperz/quotes-from-wild-irc\">random free "
+"time project</a>."
+
+#: quotequota/templates/quote.html:14
+msgid "edit"
+msgstr "edit"
+
+#. Translators: Singular noun
+#: quotequota/templates/quote_page.html:4
+msgid "Quote"
+msgstr "Quote"
