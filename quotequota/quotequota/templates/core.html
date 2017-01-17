@@ -1,4 +1,5 @@
 {% load static %}
+{% load quotequota %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,6 +17,7 @@
     {% block nav %}
     <nav>
       <ul>
+        <li>There are {% quotecount %} quotes at the time.</li>
         <li><a href="{% url "random_quote" %}">Random quote</a></li>
       </ul>
     </nav>

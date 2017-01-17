@@ -6,7 +6,13 @@
 <p>{{ line | escape }}</p>
       {% endfor %}
     <footer>
-      <cite><a href="{% url "render_quote" quote.pk %}">{{ quote.added_timestamp }} | #{{ quote.pk }}</a></cite>
+      <cite>
+        <ul class="inline">
+          <li>{{ quote.added_timestamp }}</li>
+          <li><a href="{% url "render_quote" quote.pk %}">#{{ quote.pk }}</a></li>
+          <li><a href="{% url "quotequota_quote_change" quote.pk %}">edit</a></li>
+        </ul>
+      </cite>
     </footer>
 </section>
 {% endcache %}

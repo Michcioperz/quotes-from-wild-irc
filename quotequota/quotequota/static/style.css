@@ -5,3 +5,10 @@ blockquote p {
   text-indent: -10ch;
   padding-left: 10ch;
 }
+ul.inline {
+  padding-left: 0;
+  list-style: '|';
+}
+ul.inline li {
+  display: inline;
+}
