@@ -1,4 +1,5 @@
 {% load cache %}
+{% load i18n %}
 {% cache 600 quote quote.pk %}
 <section class="quote" data-quote-id="{{ quote.pk }}">
   <blockquote>
@@ -10,7 +11,7 @@
         <ul class="inline">
           <li>{{ quote.added_timestamp }}</li>
           <li><a href="{% url "render_quote" quote.pk %}">#{{ quote.pk }}</a></li>
-          <li><a href="{% url "admin:quotequota_quote_change" quote.pk %}">edit</a></li>
+          <li><a href="{% url "admin:quotequota_quote_change" quote.pk %}">{% trans "edit" %}*</a></li>
         </ul>
       </cite>
     </footer>

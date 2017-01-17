@@ -127,3 +127,7 @@ CACHES = {
         'LOCATION': os.path.join(os.getenv('VIRTUALENV', BASE_DIR), 'tmp', 'djcache'),
     }
 }
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'quotequota', 'locale'),
+]

@@ -1,5 +1,6 @@
 {% extends "core.html" %}
-{% block title %}Quote #{{ quote.pk }}{% endblock title %}
+{# Translators: Singular noun #}
+{% block title %}{% trans "Quote" %} #{{ quote.pk }}{% endblock title %}
 {% block content %}
 {% include "quote.html" with quote=quote only %}
 {% endblock content %}

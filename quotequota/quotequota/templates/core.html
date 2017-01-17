@@ -1,25 +1,26 @@
 {% load static %}
+{% load i18n %}
 {% load quotequota %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>{% block title %}Quotes from IRC{% endblock title %}</title>
+    <title>{% block title %}{% trans "Quotes from IRC" %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static "style.css" %}">
   </head>
   <body>
     {% block header %}
     <header>
-      <h1>Quotes from IRC</h1>
+      <h1>{% trans "Quotes from IRC" %}</h1>
     </header>
     {% endblock header %}
     {% block nav %}
     <nav>
       <ul>
-        <li>There are {% quotecount %} quotes at the time.</li>
-        <li><a href="{% url "random_quote" %}">Random quote</a></li>
-        <li><a href="{% url "admin:quotequota_quote_add" %}">Add a quote</a></li>
+        <li>{% blocktrans count counter=quotecount %}There is 1 quote at the time.{% plural %}There are {{ counter }} quotes at the time.{% endblocktrans %}</li>
+        <li><a href="{% url "random_quote" %}">{% trans "Random quote" %}</a></li>
+        <li><a href="{% url "admin:quotequota_quote_add" %}">{% trans "Add a quote" %}*</a></li>
       </ul>
     </nav>
     {% endblock nav %}
@@ -27,8 +28,8 @@
     {% endblock content %}
     {% block footer %}
     <footer>
-      <p>All quotes may or may not be copyright of their respective authors.</p>
-      <p>Website powered by <a href="https://meekchopp.es">Michcioperz</a>'s <a href="https://github.com/michcioperz/quotes-from-wild-irc">random free time project</a>.</p>
+      <p>{% trans "All quotes may or may not be copyright of their respective authors." %}</p>
+      <p>{% blocktrans %}Website powered by <a href="https://meekchopp.es">Michcioperz</a>'s <a href="https://github.com/michcioperz/quotes-from-wild-irc">random free time project</a>.{% endblocktrans %}</p>
     </footer>
     {% endblock footer %}
   </body>
