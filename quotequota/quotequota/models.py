@@ -8,3 +8,6 @@ class Quote(models.Model):
 
     def get_absolute_url(self):
         return reverse("render_quote", args=(self.pk,))
+
+    def as_lines(self):
+        return content.strip().split("\n")

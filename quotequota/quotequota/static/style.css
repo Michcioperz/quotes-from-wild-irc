@@ -1,0 +1,8 @@
+pre {
+  white-space: pre-wrap;
+  font-family: 'Ubuntu Mono', 'Courier New', 'Helvetica Neue', 'Lato', 'Roboto', monospace, sans-serif;
+}
+pre p {
+  text-indent: -1em;
+  padding-left: 1em;
+}
