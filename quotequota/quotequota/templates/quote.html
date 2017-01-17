@@ -2,11 +2,9 @@
 {% cache 600 quote quote.pk %}
 <section class="quote" data-quote-id="{{ quote.pk }}">
   <blockquote>
-    <pre>
       {% for line in quote.as_lines %}
 <p>{{ line | escape }}</p>
       {% endfor %}
-    </pre>
     <footer>
       <cite><a href="{% url "render_quote" quote.pk %}">{{ quote.added_timestamp }} | #{{ quote.pk }}</a></cite>
     </footer>
