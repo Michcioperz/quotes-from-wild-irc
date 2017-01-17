@@ -18,7 +18,7 @@
     {% block nav %}
     <nav>
       <ul>
-        <li>{% blocktrans count counter=quotecount %}There is 1 quote at the time.{% plural %}There are {{ counter }} quotes at the time.{% endblocktrans %}</li>
+        <li>{% quotecount as qq %}{% blocktrans count counter=qq %}There is 1 quote at the time.{% plural %}There are {{ counter }} quotes at the time.{% endblocktrans %}</li>
         <li><a href="{% url "random_quote" %}">{% trans "Random quote" %}</a></li>
         <li><a href="{% url "admin:quotequota_quote_add" %}">{% trans "Add a quote" %}*</a></li>
       </ul>
