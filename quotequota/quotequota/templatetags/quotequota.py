@@ -7,4 +7,4 @@ register = template.Library()
 
 @register.simple_tag
 def quotecount():
-    return str(cache.get_or_set('quotes_count', Quote.models.count, timeout=300))
+    return str(cache.get_or_set('quotes_count', Quote.objects.count, timeout=300))
