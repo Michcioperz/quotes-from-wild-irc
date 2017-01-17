@@ -10,4 +10,4 @@ class Quote(models.Model):
         return reverse("render_quote", args=(self.pk,))
 
     def as_lines(self):
-        return content.strip().split("\n")
+        return self.content.strip().split("\n")
