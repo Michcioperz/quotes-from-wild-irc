@@ -3,9 +3,7 @@
 {% cache 600 quote quote.pk %}
 <section class="quote" data-quote-id="{{ quote.pk }}">
   <blockquote>
-      {% for line in quote.as_lines %}
-<p>{{ line | escape }}</p>
-      {% endfor %}
+    {{ quote.formatted|safe }}
     <footer>
       <cite>
         <ul class="inline">

@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+from pygments import highlight
+from pygments.lexers.textfmts import IrcLogsLexer
+from pygments.formatters import HtmlFormatter
 
 class Quote(models.Model):
     content = models.TextField()
@@ -9,5 +12,5 @@ class Quote(models.Model):
     def get_absolute_url(self):
         return reverse("render_quote", args=(self.pk,))
 
-    def as_lines(self):
-        return self.content.strip().split("\n")
+    def formatted(self):
+        return highlight(self.content, IrcLogsLexer(), HtmlFormatter())

@@ -5,4 +5,5 @@ def random_quote(request):
     return redirect(Quote.objects.order_by('?')[0])
 
 def render_quote(request, ident):
-    return render(request, "quote_page.html", dict(quote=get_object_or_404(Quote, pk=int(ident))))
+    quote = get_object_or_404(Quote, pk=int(ident))
+    return render(request, "quote_page.html", dict(quote=quote))
