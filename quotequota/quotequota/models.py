@@ -13,4 +13,4 @@ class Quote(models.Model):
         return reverse("render_quote", args=(self.pk,))
 
     def formatted(self):
-        return highlight(self.content, IrcLogsLexer(), HtmlFormatter())
+        return highlight(self.content, IrcLogsLexer(), HtmlFormatter(style='colorful'))
