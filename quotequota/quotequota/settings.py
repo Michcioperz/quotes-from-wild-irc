@@ -145,5 +145,5 @@ if RAVEN_DSN is not None:
     import raven
     RAVEN_CONFIG = {
         'dsn': RAVEN_DSN,
-        'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+        'release': raven.fetch_git_sha(BASE_DIR),
     }
