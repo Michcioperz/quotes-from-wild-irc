@@ -137,3 +137,13 @@ LANGUAGES = [
     ('pl', 'Polish'),
     ('en', 'English'),
 ]
+
+
+RAVEN_DSN =  os.getenv("RAVEN_DSN", None)
+if RAVEN_DSN is not None:
+    INSTALLED_APPS += ['raven.contrib.django.raven_compat']
+    import raven
+    RAVEN_CONFIG = {
+        'dsn': RAVEN_DSN,
+        'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+    }
